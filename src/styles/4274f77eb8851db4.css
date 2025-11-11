@@ -1,0 +1,1 @@
+.otp-container{display:flex;justify-content:center;gap:8px}.otpImg{text-align:center;margin:auto}.otp-container input{height:52px;border-radius:6px;background:#f5f5f5;border:1px solid #ccc;text-align:center;font-size:18px;font-weight:700;outline:none;transition:border-color .3s ease;width:100%}.otp-container input:focus{border-color:#45ae51;background:#fff}
