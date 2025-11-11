@@ -19,7 +19,7 @@ const Popup = () => {
 
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50" style={{ backgroundColor: 'rgba(0, 0, 0, 0.50)' }}>
-      <div className="relative bg-white p-8 rounded-lg shadow-lg text-center">
+      <div className="relative bg-white p-6 md:p-8 rounded-lg shadow-lg text-center w-11/12 md:w-auto max-w-md">
         <button
           className="absolute top-2 right-2 text-gray-500 hover:text-gray-800"
           onClick={() => setIsOpen(false)}
@@ -29,7 +29,7 @@ const Popup = () => {
             <line x1="6" y1="6" x2="18" y2="18"></line>
           </svg>
         </button>
-        <h2 className="text-2xl font-bold mb-4">Save upto 50% on EMI</h2>
+        <h2 className="text-xl md:text-2xl font-bold mb-4">Save upto 50% on EMI</h2>
         <p className="mb-6">Club multiple loans and Credit card bill Into single EMI</p>
         <Link href="/apply-loan">
             <button className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition">

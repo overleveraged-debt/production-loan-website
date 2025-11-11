@@ -31,7 +31,7 @@ const Testimonials = () => {
       <h2 className="text-xl sm:text-3xl md:text-4xl font-semibold text-black text-center px-4 sm:px-6 md:px-8 mb-6 sm:mb-8 md:mb-10 mt-10 sm:mt-16 md:mt-20">
         What our <span className="text-blue-600">customers</span> say about us
       </h2>
-      <div className="overflow-hidden px-2 relative">
+      <div className="overflow-hidden w-full relative">
         <div className="flex space-x-6 overflow-x-auto overflow-y-hidden snap-x snap-mandatory scroll-smooth scrollbar-hide">
           {testimonials.map((testimonial, index) => (
             <div
