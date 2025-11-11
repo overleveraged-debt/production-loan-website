@@ -50,7 +50,7 @@ width="220"
               />
             </div>
             <h4 className="text-lg font-semibold mb-4">Personal Loan</h4>
-            <ul className="text-sm space-y-2 flex-grow mb-6">
+            <ul className="text-sm space-y-2 flex-grow mb-6 hidden md:block">
               <li className="flex items-start font-medium">• Quick Approval</li>
               <li className="flex items-start font-medium">• Competitive Rates</li>
               <li className="flex items-start font-medium">• No Collateral</li>
@@ -75,7 +75,7 @@ width="220"
               />
             </div>
             <h4 className="text-lg font-semibold mb-4">Balance Transfer</h4>
-            <ul className="text-sm space-y-2 flex-grow mb-6">
+            <ul className="text-sm space-y-2 flex-grow mb-6 hidden md:block">
               <li className="flex items-start font-medium">• Lower Interest Rates</li>
               <li className="flex items-start font-medium">• Extended Tenure</li>
               <li className="flex items-start font-medium">• Top-up Available</li>
@@ -100,7 +100,7 @@ width="220"
               />
             </div>
             <h4 className="text-lg font-semibold mb-4">Emergency Loan</h4>
-            <ul className="text-sm space-y-2 flex-grow mb-6">
+            <ul className="text-sm space-y-2 flex-grow mb-6 hidden md:block">
                 <li className="flex items-start font-medium">• Medical Emergency</li>
                 <li className="flex items-start font-medium">• Home Repairs</li>
                 <li className="flex items-start font-medium">• Education Expenses</li>
@@ -125,7 +125,7 @@ width="220"
               />
             </div>
             <h4 className="text-lg font-semibold mb-4">Home Renovation Loan</h4>
-            <ul className="text-sm space-y-2 flex-grow mb-6">
+            <ul className="text-sm space-y-2 flex-grow mb-6 hidden md:block">
               <li className="flex items-start font-medium">• Dream Home Makeover</li>
               <li className="flex items-start font-medium">• No Down Payment</li>
               <li className="flex items-start font-medium">• Comprehensive Coverage</li>
@@ -150,7 +150,7 @@ width="220"
               />
             </div>
             <h4 className="text-lg font-semibold mb-4">Overdraft Loan</h4>
-            <ul className="text-sm space-y-2 flex-grow mb-6">
+            <ul className="text-sm space-y-2 flex-grow mb-6 hidden md:block">
               <li className="flex items-start font-medium">• Withdraw as Needed</li>
               <li className="flex items-start font-medium">• Pay Only Interest</li>
               <li className="flex items-start font-medium">• Revolving Credit</li>
@@ -175,7 +175,7 @@ width="220"
               />
             </div>
             <h4 className="text-lg font-semibold mb-4">Wedding Loan</h4>
-            <ul className="text-sm space-y-2 flex-grow mb-6">
+            <ul className="text-sm space-y-2 flex-grow mb-6 hidden md:block">
                 <li className="flex items-start font-medium">• Wedding Rings</li>
                 <li className="flex items-start font-medium">• Guest Expenses</li>
                 <li className="flex items-start font-medium">• Photography & Video</li>
