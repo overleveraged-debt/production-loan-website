@@ -18,6 +18,7 @@ const Products = () => {
             height="2"
             decoding="async"
             data-nimg="1"
+            className="hidden md:inline"
             src="/LineCommon.svg"
             style={{ color: 'transparent' }}
           />
@@ -25,10 +26,11 @@ const Products = () => {
           <Image
             alt="Line Right"
             loading="lazy"
-            width="220"
+width="220"
             height="2"
             decoding="async"
             data-nimg="1"
+            className="hidden md:inline"
             src="/LineCommon.svg"
             style={{ color: 'transparent' }}
           />
