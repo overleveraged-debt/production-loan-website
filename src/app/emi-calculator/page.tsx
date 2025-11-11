@@ -134,7 +134,7 @@ const EmiCalculatorPage = () => {
       ]),
       theme: 'grid',
       headStyles: { fillColor: [0, 82, 212] },
-      marginBottom: 40,
+      margin: { bottom: 40 },
     });
 
     // Add footer
