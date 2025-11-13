@@ -57,6 +57,21 @@ const AboutUsPage = () => {
             </div>
         </section>
 
+        {/* Gallery Section */}
+        <section className="py-16 bg-white">
+            <div className="container mx-auto px-4">
+                <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Gallery</h2>
+                <div className="flex justify-center gap-4">
+                    <div className="text-center">
+                        <Image src="/Mr. Raju Founder.png" alt="Mr. H. Raju - Founder" width={200} height={200} className="w-48 h-48 object-cover rounded-lg shadow-lg" />
+                    </div>
+                    <div className="text-center">
+                        <Image src="/Mr. Raju's Team.jpg" alt="Mr. Raju's Team" width={200} height={200} className="w-48 h-48 object-cover rounded-lg shadow-lg" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
         {/* Mission Section */}
         <section className="py-16 bg-gray-50">
             <div className="container mx-auto px-4">

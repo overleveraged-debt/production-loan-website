@@ -268,17 +268,7 @@ const PersonalLoanPage = () => {
                 }}
               />
               <div className="flex justify-center mt-8">
-                <Image
-                  alt="image"
-                  loading="lazy"
-                  width="653"
-                  height="103"
-                  decoding="async"
-                  data-nimg="1"
-                  className="w-[70%]"
-                  style={{ color: 'transparent' }}
-                  src="/Address.svg"
-                />
+                <p className="text-center text-gray-700">Address: No 326/3 3rd Floor, Vandana Complex, New Bazar Street, Krishnarajapuram-560036</p>
               </div>
             </div>
           </div>

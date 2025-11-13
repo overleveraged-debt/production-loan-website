@@ -29,10 +29,10 @@ const Popup = () => {
             <line x1="6" y1="6" x2="18" y2="18"></line>
           </svg>
         </button>
-        <h2 className="text-xl md:text-2xl font-bold mb-4">Save upto 50% on EMI</h2>
-        <p className="mb-6">Club multiple loans and Credit card bill Into single EMI</p>
+        <h2 className="text-lg md:text-2xl font-bold mb-4">Save upto 50% on EMI</h2>
+        <p className="mb-4 md:mb-6">Club multiple loans and Credit card bill Into single EMI</p>
         <Link href="/apply-loan">
-            <button className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition">
+            <button className="bg-blue-600 text-white px-4 py-1 md:px-6 md:py-2 rounded-full hover:bg-blue-700 transition">
                 Apply Now
             </button>
         </Link>

@@ -7,6 +7,7 @@ import "../styles/7612da1ad8b36aa4.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer"; // Import the Footer component
 import Popup from "../components/Popup";
+import FloatingButtons from "../components/FloatingButtons";
 
 export const metadata: Metadata = {
   title: "Easy Personal Loan Services",
@@ -28,6 +29,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer /> {/* Render the Footer component */}
+        <FloatingButtons />
       </body>
     </html>
   );

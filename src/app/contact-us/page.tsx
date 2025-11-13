@@ -64,8 +64,8 @@ const ContactUsPage = () => {
                 src="/call.svg"
               />
               <h3 className="font-semibold text-lg mt-3">Call Us</h3>
-              <a href="tel:+919873883888" className="text-blue-500 font-medium">
-                +91-987 388 3888
+              <a href="tel:+918722545666" className="text-blue-500 font-medium">
+                +91 8722545666
               </a>
               <p className="text-gray-600 text-sm mt-2">
                 Mon-Fri: 9:00 AM - 7:00 PM IST
@@ -104,15 +104,9 @@ const ContactUsPage = () => {
                 src="/office.svg"
               />
               <h3 className="font-semibold text-lg mt-3">Visit Us</h3>
-              <p className="text-blue-500 font-medium">Corporate Office:</p>
+              <p className="text-blue-500 font-medium">Address:</p>
               <p className="text-gray-600 text-sm">
-                A 12-13, Sector 16, Noida, Uttar Pradesh 201301
-              </p>
-              <p className="text-blue-500 font-medium mt-3">
-                Write to us at:
-              </p>
-              <p className="text-gray-600 text-sm">
-                5/2/8, Geeta Colony, New Delhi - 110031
+              No 326/3 3rd Floor, Vandana Complex, New Bazar Street, Krishnarajapuram-560036
               </p>
             </div>
           </div>
