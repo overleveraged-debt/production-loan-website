@@ -12,9 +12,9 @@ interface AmortizationItem {
 }
 
 const EmiCalculatorPage = () => {
-  const [loanAmount, setLoanAmount] = useState(50000);
-  const [interestRate, setInterestRate] = useState(9.99);
-  const [loanTenure, setLoanTenure] = useState(1);
+  const [loanAmount, setLoanAmount] = useState<number | null>(null);
+  const [interestRate, setInterestRate] = useState<number | null>(null);
+  const [loanTenure, setLoanTenure] = useState<number | null>(null);
   const [monthlyEmi, setMonthlyEmi] = useState(0);
   const [totalInterest, setTotalInterest] = useState(0);
   const [totalAmount, setTotalAmount] = useState(0);
@@ -22,6 +22,10 @@ const EmiCalculatorPage = () => {
   const [showAmortization, setShowAmortization] = useState(false);
 
   const calculateEmi = () => {
+    if (!loanAmount || !interestRate || !loanTenure || loanAmount <= 0 || interestRate < 0 || loanTenure <= 0) {
+      return 0;
+    }
+
     const principal = loanAmount;
     const annualInterestRate = interestRate;
     const tenureInYears = loanTenure;
@@ -43,6 +47,11 @@ const EmiCalculatorPage = () => {
   };
 
   const generateAmortization = () => {
+    if (!loanAmount || !interestRate || !loanTenure || loanAmount <= 0 || interestRate < 0 || loanTenure <= 0) {
+      setAmortizationSchedule([]);
+      return;
+    }
+
     const principal = loanAmount;
     const annualInterestRate = interestRate;
     const tenureInYears = loanTenure;
@@ -74,11 +83,12 @@ const EmiCalculatorPage = () => {
   };
 
   useEffect(() => {
+    document.title = 'EMI Calculator for Personal Loans | Easy Personal Loan Services';
     const emi = calculateEmi();
     setMonthlyEmi(emi);
-    const totalAmount = emi * loanTenure * 12;
+    const totalAmount = emi * (loanTenure || 0) * 12;
     setTotalAmount(totalAmount);
-    setTotalInterest(totalAmount - loanAmount);
+    setTotalInterest(totalAmount - (loanAmount || 0));
     generateAmortization();
   }, [loanAmount, interestRate, loanTenure]);
 
@@ -103,9 +113,9 @@ const EmiCalculatorPage = () => {
     // Add loan details
     doc.setFontSize(12);
     doc.text('Loan Details:', 20, 65);
-    doc.text(`Loan Amount: Rs. ${new Intl.NumberFormat('en-IN').format(loanAmount)}`, 20, 75);
-    doc.text(`Interest Rate: ${interestRate}% p.a.`, 20, 85);
-    doc.text(`Loan Tenure: ${loanTenure} years (${loanTenure * 12} months)`, 20, 95);
+    doc.text(`Loan Amount: Rs. ${new Intl.NumberFormat('en-IN').format(loanAmount || 0)}`, 20, 75);
+    doc.text(`Interest Rate: ${interestRate || 0}% p.a.`, 20, 85);
+    doc.text(`Loan Tenure: ${loanTenure || 0} years (${(loanTenure || 0) * 12} months)`, 20, 95);
 
     // Add payment summary
     autoTable(doc, {
@@ -113,18 +123,19 @@ const EmiCalculatorPage = () => {
       head: [['Payment Summary', 'Amount']],
       body: [
         ['Monthly EMI', `Rs. ${new Intl.NumberFormat('en-IN').format(Math.round(monthlyEmi))}`],
-        ['Principal Amount', `Rs. ${new Intl.NumberFormat('en-IN').format(loanAmount)}`],
+        ['Principal Amount', `Rs. ${new Intl.NumberFormat('en-IN').format(loanAmount || 0)}`],
         ['Total Interest', `Rs. ${new Intl.NumberFormat('en-IN').format(Math.round(totalInterest))}`],
         ['Total Amount Payable', `Rs. ${new Intl.NumberFormat('en-IN').format(Math.round(totalAmount))}`]
       ],
       theme: 'grid',
-      headStyles: { fillColor: [0, 82, 212] },
+      headStyles: { fillColor: [37, 99, 235], textColor: [255, 255, 255], fontStyle: 'bold' },
+      styles: { cellPadding: 3, fontSize: 10 },
     });
 
     // Add amortization schedule
     autoTable(doc, {
       startY: (doc as any).lastAutoTable.finalY + 15,
-      head: [['Month #', 'Principal Paid', 'Interest Paid', 'Total Payment', 'Remaining Balance']],
+      head: [['Month', 'Principal Paid', 'Interest Paid', 'Total Payment', 'Remaining Balance']],
       body: amortizationSchedule.map(payment => [
         payment.month,
         `Rs. ${new Intl.NumberFormat('en-IN').format(Math.round(payment.principalPaid))}`,
@@ -133,7 +144,9 @@ const EmiCalculatorPage = () => {
         `Rs. ${new Intl.NumberFormat('en-IN').format(Math.round(payment.remainingBalance))}`
       ]),
       theme: 'grid',
-      headStyles: { fillColor: [0, 82, 212] },
+      headStyles: { fillColor: [37, 99, 235], textColor: [255, 255, 255], fontStyle: 'bold' },
+      alternateRowStyles: { fillColor: [249, 250, 251] },
+      styles: { cellPadding: 3, fontSize: 10 },
       margin: { bottom: 40 },
     });
 
@@ -167,8 +180,9 @@ const EmiCalculatorPage = () => {
               <input
                 type="number"
                 id="loan-amount"
-                value={loanAmount}
-                onChange={(e) => setLoanAmount(Number(e.target.value))}
+                value={loanAmount === null ? '' : loanAmount}
+                onChange={(e) => setLoanAmount(Number(e.target.value) || null)}
+                placeholder="e.g., 500000"
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>
@@ -180,8 +194,9 @@ const EmiCalculatorPage = () => {
               <input
                 type="number"
                 id="interest-rate"
-                value={interestRate}
-                onChange={(e) => setInterestRate(Number(e.target.value))}
+                value={interestRate === null ? '' : interestRate}
+                onChange={(e) => setInterestRate(Number(e.target.value) || null)}
+                placeholder="e.g., 9.99"
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>
@@ -193,8 +208,9 @@ const EmiCalculatorPage = () => {
               <input
                 type="number"
                 id="loan-tenure"
-                value={loanTenure}
-                onChange={(e) => setLoanTenure(Number(e.target.value))}
+                value={loanTenure === null ? '' : loanTenure}
+                onChange={(e) => setLoanTenure(Number(e.target.value) || null)}
+                placeholder="e.g., 5"
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>
@@ -211,7 +227,7 @@ const EmiCalculatorPage = () => {
               <div className="flex justify-between">
                 <span className="text-gray-600">Principal Amount:</span>
                 <span className="font-medium">
-                  ₹{new Intl.NumberFormat('en-IN').format(loanAmount)}
+                  ₹{new Intl.NumberFormat('en-IN').format(loanAmount || 0)}
                 </span>
               </div>
               <div className="flex justify-between">
@@ -248,31 +264,31 @@ const EmiCalculatorPage = () => {
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-xl font-semibold text-gray-900">Amortization Schedule</h2>
             </div>
-            <div className="overflow-x-auto">
-              <table className="w-full text-sm table-fixed">
+            <div className="overflow-x-auto shadow-lg rounded-lg">
+              <table className="min-w-full bg-white border border-gray-200">
                 <thead>
-                  <tr className="border-b">
-                    <th className="text-left py-2 px-4 font-medium text-gray-700">Month No.</th>
-                    <th className="py-2 px-4 font-medium text-gray-700 text-left">Principal Paid</th>
-                    <th className="py-2 px-4 font-medium text-gray-700 text-left">Interest Paid</th>
-                    <th className="py-2 px-4 font-medium text-gray-700 text-left">Total Payment</th>
-                    <th className="py-2 px-4 font-medium text-gray-700 text-left">Remaining Balance</th>
+                  <tr className="bg-blue-250 text-white">
+                    <th className="py-4 px-6 border-b text-left font-bold">Month No.</th>
+                    <th className="py-4 px-6 border-b text-left font-bold">Principal Paid</th>
+                    <th className="py-4 px-6 border-b text-left font-bold">Interest Paid</th>
+                    <th className="py-4 px-6 border-b text-left font-bold hidden md:table-cell">Total Payment</th>
+                    <th className="py-4 px-6 border-b text-left font-bold">Remaining Balance</th>
                   </tr>
                 </thead>
                 <tbody>
                   {amortizationSchedule.map((payment) => (
-                    <tr key={payment.month} className="border-b border-gray-100">
-                      <td className="py-2 px-4 text-left">{payment.month}</td>
-                      <td className="py-2 px-4 text-left">
+                    <tr key={payment.month} className="even:bg-gray-50 hover:bg-gray-100">
+                      <td className="py-4 px-6 border-b text-xs md:text-sm">{payment.month}</td>
+                      <td className="py-4 px-6 border-b text-xs md:text-sm">
                         ₹{new Intl.NumberFormat('en-IN').format(Math.round(payment.principalPaid))}
                       </td>
-                      <td className="py-2 px-4 text-left">
+                      <td className="py-4 px-6 border-b text-xs md:text-sm">
                         ₹{new Intl.NumberFormat('en-IN').format(Math.round(payment.interestPaid))}
                       </td>
-                      <td className="py-2 px-4 text-left">
+                      <td className="py-4 px-6 border-b hidden md:table-cell text-xs md:text-sm">
                         ₹{new Intl.NumberFormat('en-IN').format(Math.round(payment.totalPayment))}
                       </td>
-                      <td className="py-2 px-4 text-left">
+                      <td className="py-4 px-6 border-b text-xs md:text-sm">
                         ₹{new Intl.NumberFormat('en-IN').format(Math.round(payment.remainingBalance))}
                       </td>
                     </tr>

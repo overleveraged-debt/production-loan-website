@@ -1,8 +1,12 @@
 "use client";
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 
 const AboutUsPage = () => {
+  useEffect(() => {
+    document.title = 'About Us | Easy Personal Loan Services';
+  }, []);
+
   return (
     <div>
       {/* Page Content */}

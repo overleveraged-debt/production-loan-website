@@ -76,12 +76,8 @@ const Footer = () => {
         <div className="md:col-span-3">
 
           <div className="flex items-center space-x-3 mt-4 mb-2">
-            <a target="_blank" rel="nofollow" href="#">
-              <Image alt="facebook" loading="lazy" width="32" height="32" decoding="async" data-nimg="1" style={{ color: 'transparent' }} src="/facebook.svg" />
-            </a>
-            <a target="_blank" rel="nofollow" href="#">
-              <Image alt="insta" loading="lazy" width="33" height="32" decoding="async" data-nimg="1" style={{ color: 'transparent' }} src="/insta.svg" />
-            </a>
+            <Image alt="facebook" loading="lazy" width="32" height="32" decoding="async" data-nimg="1" style={{ color: 'transparent' }} src="/facebook.svg" />
+            <Image alt="insta" loading="lazy" width="33" height="32" decoding="async" data-nimg="1" style={{ color: 'transparent' }} src="/insta.svg" />
             <a target="_blank" rel="nofollow" href="https://maps.app.goo.gl/mxSsWo7mBMcRDQEr6">
               <Image alt="gmb" loading="lazy" width="32" height="32" decoding="async" data-nimg="1" style={{ color: 'transparent', borderRadius: '3px' }} src="/gmb icon.svg" />
             </a>
@@ -119,11 +115,13 @@ const Footer = () => {
           <div>
             <h3 className="text-[15px] md:text-[18px] font-semibold text-blue-250 mb-4">Personal Loan by Location</h3>
             <ul className="mt-2 space-y-2 text-[11px] md:text-[13px]">
-              <li><Link href="/personal-loan">Personal Loan in Delhi</Link></li>
-              <li><Link href="/personal-loan">Personal Loan in Mumbai</Link></li>
-              <li><Link href="/personal-loan">Personal Loan in Bangalore</Link></li>
-              <li><Link href="/personal-loan">Personal Loan in Pune</Link></li>
-              <li><Link href="/personal-loan">Personal Loan in Kolkata</Link></li>
+              <li><Link href="/personal-loan">Personal Loan in KR Puram</Link></li>
+              <li><Link href="/personal-loan">Personal Loan in Whitefield</Link></li>
+              <li><Link href="/personal-loan">Personal Loan in Mahadevapura</Link></li>
+              <li><Link href="/personal-loan">Personal Loan in Ramamurthy Nagar</Link></li>
+              <li><Link href="/personal-loan">Personal Loan in Hoodi</Link></li>
+              <li><Link href="/personal-loan">Personal Loan in Dooravani Nagar</Link></li>
+              <li><Link href="/personal-loan">Personal Loan in Vijinapura</Link></li>
             </ul>
           </div>
           <div>

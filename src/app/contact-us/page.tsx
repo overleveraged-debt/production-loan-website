@@ -1,9 +1,13 @@
 "use client";
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 const ContactUsPage = () => {
+  useEffect(() => {
+    document.title = 'Contact Us | Easy Personal Loan Services';
+  }, []);
+
   return (
     <div className="bg-[#e7f0ff]">
       <div className="mx-auto px-4 md:px-8 py-2">
@@ -127,7 +131,7 @@ const ContactUsPage = () => {
         </div>
         <div className="w-full">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15402694.003694715!2d59.768704616304284!3d19.52343042563181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd26a2554b7d%3A0x41a584f609cbfeaa!2sLoansJagat.com%20%7C%20India%E2%80%99s%20First%20Debt%20Consolidation%20Marketplace%20for%20Personal%20%26%20Business%20Loans!5e0!3m2!1sen!2sin!4v1718702381079!5m2!1sen!2sin"
+            src="https://maps.google.com/maps?q=Vandana%20Complex,%20New%20Bazar%20Street,%20Krishnarajapuram,%20Bengaluru&t=&z=15&ie=UTF8&iwloc=&output=embed"
             width="100%"
             height="450"
             style={{ border: 0 }}

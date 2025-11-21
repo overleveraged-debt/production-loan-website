@@ -1,7 +1,11 @@
 "use client";
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const TermsAndConditionsPage = () => {
+  useEffect(() => {
+    document.title = 'Terms and Conditions | Easy Personal Loan Services';
+  }, []);
+
   return (
     <div>
       <div className="max-w-[1294px] mx-auto px-4 mt-10">
@@ -42,6 +46,7 @@ const TermsAndConditionsPage = () => {
                 <li>Maintain confidentiality of login credentials</li>
                 <li>Comply with applicable laws and regulations</li>
                 <li>Not attempt to circumvent security measures</li>
+                
             </ul>
 
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">4. Eligibility and Application Process</h2>

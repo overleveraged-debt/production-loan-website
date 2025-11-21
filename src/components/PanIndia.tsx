@@ -17,7 +17,7 @@ const PanIndia = () => {
           src="/serving_pan2.svg"
         />
         <span className="text-xl sm:text-3xl md:text-3xl font-semibold text-black text-center ">
-          Serving Pan India Customers
+          Serving Our Customers
         </span>
         <Image
           alt="Decorative right icon"
@@ -34,7 +34,7 @@ const PanIndia = () => {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
         <div className="flex flex-col items-center text-center">
           <p className="text-2xl md:text-4xl font-semibold text-blue-lightblue">
-            1 million +
+            10 Lakh +
           </p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-1 md:gap-2 mt-1 text-gray-600">
             <Image
@@ -52,7 +52,7 @@ const PanIndia = () => {
         </div>
         <div className="flex flex-col items-center text-center">
           <p className="text-2xl md:text-4xl font-semibold text-blue-lightblue">
-            2,000 Cr +
+            100 Cr+
           </p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-1 md:gap-2 mt-1 text-gray-600">
             <Image

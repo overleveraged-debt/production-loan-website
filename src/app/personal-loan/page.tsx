@@ -1,10 +1,13 @@
 "use client";
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import LoanApplicationForm from '../../components/LoanApplicationForm';
 
 const PersonalLoanPage = () => {
+  useEffect(() => {
+    document.title = 'Personal Loan Details | Easy Personal Loan Services';
+  }, []);
   return (
     <div>
 
@@ -89,7 +92,7 @@ const PersonalLoanPage = () => {
                       <ul style="list-style-type:disc;margin-top:0in" type="disc">
                         <li class="MsoNormal" style="background-color:#F0F7FF;mso-list:l0 level1 lfo1;tab-stops:list .5in"><span style="font-family:&quot;Segoe UI Emoji&quot;,sans-serif;font-size:12px"><span style="color:black;mso-bidi-font-family:&quot;Segoe UI Emoji&quot;;mso-color-alt:windowtext">👨‍💼</span></span><span style="font-size:12px"><span style="color:black;mso-color-alt:windowtext"> Salaried Individual</span><o:p></o:p></span></li>
                         <li class="MsoNormal" style="background-color:#F0F7FF;mso-list:l0 level1 lfo1;tab-stops:list .5in"><span style="font-family:&quot;Segoe UI Emoji&quot;,sans-serif;font-size:12px"><span style="line-height:115%;mso-ansi-language:EN-US;mso-bidi-font-family:&quot;Segoe UI Emoji&quot;;mso-bidi-font-size:10.5pt;mso-bidi-language:HI;mso-fareast-font-family:Calibri;mso-fareast-language:EN-US;mso-fareast-theme-font:minor-latin">📈</span></span><span style="font-size:12px"><span style="color:black;mso-color-alt:windowtext"> A credit score above 700</span><o:p></o:p></span></li>
-                        <li class="MsoNormal" style="background-color:#F0F7FF;mso-list:l0 level1 lfo1;tab-stops:list .5in"><span style="font-family:&quot;Segoe UI Emoji&quot;,sans-serif;font-size:12px"><span style="line-height:115%;mso-ansi-language:EN-US;mso-bidi-font-family:&quot;Segoe UI Emoji&quot;;mso-bidi-font-size:10.5pt;mso-bidi-language:HI;mso-fareast-font-family:Calibri;mso-fareast-language:EN-US;mso-fareast-theme-font:minor-latin">💳</span></span><span style="font-size:12px"><span style="color:black;mso-color-alt:windowtext"> ₹40K/month income in metro cities and ₹30K in other cities</span><o:p></o:p></span></li>
+                        <li class="MsoNormal" style="background-color:#F0F7FF;mso-list:l0 level1 lfo1;tab-stops:list .5in"><span style="font-family:&quot;Segoe UI Emoji&quot;,sans-serif;font-size:12px"><span style="color:black;mso-color-alt:windowtext">💳</span></span><span style="font-size:12px"><span style="color:black;mso-color-alt:windowtext"> ₹40K/month income in metro cities and ₹30K in other cities</span><o:p></o:p></span></li>
                         <li class="MsoNormal" style="background-color:#F0F7FF;mso-list:l0 level1 lfo1;tab-stops:list .5in"><span style="font-family:&quot;Segoe UI Emoji&quot;,sans-serif;font-size:12px"><span style="color:black;mso-bidi-font-family:&quot;Segoe UI Emoji&quot;;mso-color-alt:windowtext">🧑‍💻</span></span><span style="font-size:12px"><span style="color:black;mso-color-alt:windowtext"> Total work experience of at least 1 year</span><o:p></o:p></span></li>
                       </ul>
                       `,
@@ -105,6 +108,7 @@ const PersonalLoanPage = () => {
                       height="35"
                       decoding="async"
                       data-nimg="1"
+                      className="mb-2"
                       style={{ color: 'transparent' }}
                       src="/Age.png"
                     />
@@ -152,7 +156,7 @@ const PersonalLoanPage = () => {
                             <li class="MsoNormal" style="background-color:#FAFAFA;mso-list:l0 level1 lfo1;tab-stops:list .5in"><span style="font-size:12px"><span style="color:black;mso-color-alt:windowtext">Voter ID</span><o:p></o:p></span></li>
                             <li class="MsoNormal" style="background-color:#FAFAFA;mso-list:l0 level1 lfo1;tab-stops:list .5in"><span style="font-size:12px"><span style="color:black;mso-color-alt:windowtext">Driving License</span><o:p></o:p></span></li>
                             <li class="MsoNormal" style="background-color:#FAFAFA;mso-list:l0 level1 lfo1;tab-stops:list .5in"><span style="font-size:12px"><span style="color:black;mso-color-alt:windowtext">PAN Card (Mandatory)</span><o:p></o:p></span></li>
-                            <li class="MsoNormal" style="background-color:#FAFAFA;mso-list:l0 level1 lfo1;tab-stops:list .5in"><span style="font-size:12px"><span style="color:black;mso-color-alt:windowtext">Aadhaar Card (Mandatory)</span><o:p></o:p></span></li>
+                            <li class="MsoNormal" style="background-color:#FAFAFA;mso-list:l0 level1 lfo1;tab-stops:list .5in"><span style="font-size:14px"><span style="color:black;mso-color-alt:windowtext">Aadhaar Card (Mandatory)</span><o:p></o:p></span></li>
                           </ul>
                           `,
                         }}

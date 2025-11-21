@@ -1,7 +1,11 @@
 "use client";
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const PrivacyPolicyPage = () => {
+  useEffect(() => {
+    document.title = 'Privacy Policy | Easy Personal Loan Services';
+  }, []);
+
   return (
     <div>
       <div className="max-w-[1294px] mx-auto px-4 mt-10">

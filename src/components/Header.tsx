@@ -58,6 +58,9 @@ const Header = () => {
           <Link href="/emi-calculator" className="hover:text-black">
             EMI Calculator
           </Link>
+          <Link href="/compare-loans" className="hover:text-black">
+            Compare Loans
+          </Link>
           <div className="relative" onMouseEnter={() => setIsDropdownOpen(true)} onMouseLeave={() => setIsDropdownOpen(false)}>
             <button
               className="flex items-center hover:text-black"
@@ -125,6 +128,9 @@ const Header = () => {
           </Link>
           <Link href="/emi-calculator" className="block py-2 text-sm text-gray-700 hover:text-blue-250">
             EMI Calculator
+          </Link>
+          <Link href="/compare-loans" className="block py-2 text-sm text-gray-700 hover:text-blue-250">
+            Compare Loans
           </Link>
           <div className="relative">
             <button

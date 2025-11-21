@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const LoanApplicationForm = () => {
   const [step, setStep] = useState(1);
@@ -34,6 +35,14 @@ const LoanApplicationForm = () => {
           sizes="100vw"
           src="/applyImageBanner.png"
         />
+        <div className="text-center my-8">
+          <p className="text-lg text-gray-700">
+            Not sure which loan to choose? Compare interest rates from top banks.
+          </p>
+          <Link href="/compare-loans" className="text-blue-600 font-semibold hover:underline">
+            Compare Personal Loans
+          </Link>
+        </div>
         <div className="mt-[2%]">
           <h2 className="text-lg font-semibold text-gray-800 mb-4"></h2>
           <div className="shadow-[0px_10px_60px_0px_rgba(0,0,0,0.1)] bg-white rounded-[13px] p-0 md:p-6 ">
@@ -182,7 +191,7 @@ const LoanApplicationForm = () => {
 
                         <div className="mb-6">
                             <label className="block text-sm font-medium text-gray-700 mb-2">Salary Type</label>
-                            <div className="space-y-3">
+                            <div className="space-.y-3">
                                 <label className="flex items-center">
                                     <input type="radio" name="salary-type" value="cash" required className="mr-3" />
                                     <span>Cash</span>
@@ -211,6 +220,9 @@ const LoanApplicationForm = () => {
                         </div>
                         <h2 className="text-2xl font-bold mb-4 text-gray-900">Thank you for your application!</h2>
                         <p className="text-lg text-gray-600 mb-6">Thank you for your application. We will contact you within 24 working hours.</p>
+                        <p className="text-lg text-gray-600 mb-6">
+                          While you wait, you can <Link href="/compare-loans" className="text-blue-600 font-semibold hover:underline">compare personal loan interest rates</Link> from top banks.
+                        </p>
                         <a href="/" className="bg-blue-600 text-white px-8 py-3 rounded-md">Back to Home</a>
                       </div>
                     )}
