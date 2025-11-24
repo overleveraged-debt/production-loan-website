@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
 import "../styles/ab6c556e72972536.css";
 import "../styles/2e5ecf18a2cce2f9.css";
 import "../styles/f88b1d6827271c73.css";
@@ -30,6 +31,7 @@ export default function RootLayout({
         {children}
         <Footer /> {/* Render the Footer component */}
         <FloatingButtons />
+        <Analytics />
       </body>
     </html>
   );
