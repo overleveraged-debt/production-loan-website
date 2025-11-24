@@ -76,9 +76,11 @@ const Footer = () => {
         <div className="md:col-span-3">
 
           <div className="flex items-center space-x-3 mt-4 mb-2">
-            <Image alt="facebook" loading="lazy" width="32" height="32" decoding="async" data-nimg="1" style={{ color: 'transparent' }} src="/facebook.svg" />
+            <a target="_blank" rel="nofollow" href="https://www.facebook.com/p/Easy-Personal-Loan-100069695372023/">
+              <Image alt="facebook" loading="lazy" width="32" height="32" decoding="async" data-nimg="1" style={{ color: 'transparent' }} src="/facebook.svg" />
+            </a>
             <Image alt="insta" loading="lazy" width="33" height="32" decoding="async" data-nimg="1" style={{ color: 'transparent' }} src="/insta.svg" />
-            <a target="_blank" rel="nofollow" href="https://maps.app.goo.gl/mxSsWo7mBMcRDQEr6">
+            <a target="_blank" rel="nofollow" href="https://share.google/bx7r6AITBjTDIkJFn">
               <Image alt="gmb" loading="lazy" width="32" height="32" decoding="async" data-nimg="1" style={{ color: 'transparent', borderRadius: '3px' }} src="/gmb icon.svg" />
             </a>
           </div>

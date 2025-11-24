@@ -13,10 +13,10 @@ const partners = [
   { alt: 'HDFC Bank', src: '/partners/HDFC_Bank_Logo.png' },
   { alt: 'ICICI Bank', src: '/partners/icici-header-logo.png' },
   { alt: 'IDFC First Bank', src: '/partners/IDFC-logo-website.svg' },
-  { alt: 'IndusInd Bank', src: '/partners/indusind-bank1.webp' },
-  { alt: 'Kotak Mahindra Bank', src: '/partners/Kotak_Mahindra_Bank_logo 2.png' },
-  { alt: 'L&T Finance', src: '/partners/lt-logo.webp' },
-  { alt: 'Tata Capital', src: '/partners/tata capital logo.png' },
+  { alt: 'IndusInd Bank', src: '/partners/pngegg.png' },
+  { alt: 'Kotak Mahindra Bank', src: '/partners/Kotak Mahindra Bank.svg' },
+  { alt: 'L&T Finance', src: '/partners/iduM1TA-fw_logos.JPEG' },
+  { alt: 'Tata Capital', src: '/partners/tata capital logo.jpg' },
   { alt: 'Yes Bank', src: '/partners/Yes-Bank-logo.svg' },
 ];
 
@@ -31,23 +31,26 @@ const Partners = () => {
       </h2>
       <div className="slider">
         <div className="slide-track">
-          {extendedPartners.map((partner, index) => (
-            <div className="slide" key={index}>
-              <Link href="/apply-loan">
-                <Image
-                  alt={partner.alt}
-                  loading="lazy"
-                  width="140"
-                  height="70"
-                  decoding="async"
-                  data-nimg="1"
-                  className="object-contain"
-                  style={{ color: 'transparent' }}
-                  src={partner.src}
-                />
-              </Link>
-            </div>
-          ))}
+          {extendedPartners.map((partner, index) => {
+            const isLarge = ['HDFC Bank', 'ICICI Bank', 'Tata Capital', 'L&T Finance', 'IndusInd Bank', 'Kotak Mahindra Bank'].includes(partner.alt);
+            return (
+              <div className="slide" key={index}>
+                <Link href="/apply-loan">
+                  <Image
+                    alt={partner.alt}
+                    loading="lazy"
+                    width={isLarge ? "180" : "140"}
+                    height={isLarge ? "90" : "70"}
+                    decoding="async"
+                    data-nimg="1"
+                    className="object-contain"
+                    style={{ color: 'transparent' }}
+                    src={partner.src}
+                  />
+                </Link>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
