@@ -15,7 +15,7 @@ const partners = [
   { alt: 'IDFC First Bank', src: '/partners/IDFC-logo-website.svg' },
   { alt: 'IndusInd Bank', src: '/partners/pngegg.png' },
   { alt: 'Kotak Mahindra Bank', src: '/partners/Kotak Mahindra Bank.svg' },
-  { alt: 'L&T Finance', src: '/partners/iduM1TA-fw_logos.JPEG' },
+  { alt: 'L&T Finance', src: '/partners/l and t f.webp' },
   { alt: 'Tata Capital', src: '/partners/tata capital logo.jpg' },
   { alt: 'Yes Bank', src: '/partners/Yes-Bank-logo.svg' },
 ];
