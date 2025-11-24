@@ -2,9 +2,9 @@ import React from 'react';
 
 const FloatingButtons = () => {
   return (
-    <div className="fixed bottom-4 right-4 z-50 flex flex-col items-center space-y-4">
+    <div className="fixed bottom-4 right-4 flex flex-col items-center space-y-4 mb-20 md:mb-0" style={{ zIndex: 2147483647 }}>
       <a
-        href="https://wa.me/918722545666"
+        href="https://wa.me/919620204583"
         target="_blank"
         rel="noopener noreferrer"
         className="bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-all"

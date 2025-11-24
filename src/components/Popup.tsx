@@ -143,18 +143,20 @@ const Popup = () => {
         </div>
 
         <Link href="/apply-loan">
-          <button style={{
-            background: 'linear-gradient(to right, #2563eb, #1d4ed8)',
-            color: '#ffffff',
-            padding: isMobile ? '12px 32px' : '16px 48px',
-            borderRadius: '9999px',
-            fontSize: isMobile ? '16px' : '20px',
-            fontWeight: 'bold',
-            border: 'none',
-            cursor: 'pointer',
-            boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.3)',
-            transition: 'all 0.3s'
-          }}
+          <button
+            onClick={() => setIsOpen(false)}
+            style={{
+              background: 'linear-gradient(to right, #2563eb, #1d4ed8)',
+              color: '#ffffff',
+              padding: isMobile ? '12px 32px' : '16px 48px',
+              borderRadius: '9999px',
+              fontSize: isMobile ? '16px' : '20px',
+              fontWeight: 'bold',
+              border: 'none',
+              cursor: 'pointer',
+              boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.3)',
+              transition: 'all 0.3s'
+            }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = 'scale(1.05)';
               e.currentTarget.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.5)';
