@@ -127,7 +127,7 @@ const EmiCalculatorPage = () => {
 
     // Add amortization schedule
     autoTable(doc, {
-      startY: (doc as { lastAutoTable: { finalY: number } }).lastAutoTable.finalY + 15,
+      startY: (doc as any).lastAutoTable.finalY + 15,
       head: [['Month', 'Principal Paid', 'Interest Paid', 'Total Payment', 'Remaining Balance']],
       body: amortizationSchedule.map(payment => [
         payment.month,
@@ -290,7 +290,7 @@ const EmiCalculatorPage = () => {
               </table>
             </div>
             <div className="mt-6 text-center">
-              
+
             </div>
           </div>
         )}
