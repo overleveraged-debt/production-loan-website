@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
 
@@ -15,13 +15,11 @@ const EmiCalculatorPage = () => {
   const [loanAmount, setLoanAmount] = useState<number | null>(null);
   const [interestRate, setInterestRate] = useState<number | null>(null);
   const [loanTenure, setLoanTenure] = useState<number | null>(null);
-  const [monthlyEmi, setMonthlyEmi] = useState(0);
-  const [totalInterest, setTotalInterest] = useState(0);
-  const [totalAmount, setTotalAmount] = useState(0);
-  const [amortizationSchedule, setAmortizationSchedule] = useState<AmortizationItem[]>([]);
+
+
   const [showAmortization, setShowAmortization] = useState(false);
 
-  const calculateEmi = () => {
+  const monthlyEmi = useMemo(() => {
     if (!loanAmount || !interestRate || !loanTenure || loanAmount <= 0 || interestRate < 0 || loanTenure <= 0) {
       return 0;
     }
@@ -44,26 +42,31 @@ const EmiCalculatorPage = () => {
       (Math.pow(1 + monthlyInterestRate, numberOfPayments) - 1);
 
     return emi;
-  };
+  }, [loanAmount, interestRate, loanTenure]);
 
-  const generateAmortization = () => {
+  const totalAmount = useMemo(() => monthlyEmi * (loanTenure || 0) * 12, [monthlyEmi, loanTenure]);
+  const totalInterest = useMemo(() => totalAmount - (loanAmount || 0), [totalAmount, loanAmount]);
+
+  useEffect(() => {
+    document.title = 'EMI Calculator for Personal Loans | Easy Personal Loan Services';
+  }, []);
+
+  const amortizationSchedule = useMemo(() => {
     if (!loanAmount || !interestRate || !loanTenure || loanAmount <= 0 || interestRate < 0 || loanTenure <= 0) {
-      setAmortizationSchedule([]);
-      return;
+      return [];
     }
 
     const principal = loanAmount;
     const annualInterestRate = interestRate;
     const tenureInYears = loanTenure;
-    const schedule = [];
+    const schedule: AmortizationItem[] = [];
     const monthlyInterestRate = annualInterestRate / 100 / 12;
     const numberOfPayments = tenureInYears * 12;
     let remainingBalance = principal;
 
     for (let month = 1; month <= numberOfPayments; month++) {
       const interestPayment = remainingBalance * monthlyInterestRate;
-      const emi = calculateEmi();
-      const principalPayment = emi - interestPayment;
+      const principalPayment = monthlyEmi - interestPayment;
 
       remainingBalance -= principalPayment;
 
@@ -75,22 +78,12 @@ const EmiCalculatorPage = () => {
         month: month,
         principalPaid: principalPayment,
         interestPaid: interestPayment,
-        totalPayment: emi,
+        totalPayment: monthlyEmi,
         remainingBalance: remainingBalance,
       });
     }
-    setAmortizationSchedule(schedule);
-  };
-
-  useEffect(() => {
-    document.title = 'EMI Calculator for Personal Loans | Easy Personal Loan Services';
-    const emi = calculateEmi();
-    setMonthlyEmi(emi);
-    const totalAmount = emi * (loanTenure || 0) * 12;
-    setTotalAmount(totalAmount);
-    setTotalInterest(totalAmount - (loanAmount || 0));
-    generateAmortization();
-  }, [loanAmount, interestRate, loanTenure]);
+    return schedule;
+  }, [loanAmount, interestRate, loanTenure, monthlyEmi]);
 
 
 
@@ -134,7 +127,7 @@ const EmiCalculatorPage = () => {
 
     // Add amortization schedule
     autoTable(doc, {
-      startY: (doc as any).lastAutoTable.finalY + 15,
+      startY: (doc as { lastAutoTable: { finalY: number } }).lastAutoTable.finalY + 15,
       head: [['Month', 'Principal Paid', 'Interest Paid', 'Total Payment', 'Remaining Balance']],
       body: amortizationSchedule.map(payment => [
         payment.month,
@@ -151,7 +144,7 @@ const EmiCalculatorPage = () => {
     });
 
     // Add footer
-    const pageCount = (doc as any).internal.getNumberOfPages();
+    const pageCount = (doc as jsPDF & { internal: { getNumberOfPages: () => number } }).internal.getNumberOfPages();
     for (let i = 1; i <= pageCount; i++) {
       doc.setPage(i);
       const pageHeight = doc.internal.pageSize.height;

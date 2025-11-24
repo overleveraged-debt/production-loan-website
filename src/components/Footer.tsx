@@ -132,6 +132,7 @@ const Footer = () => {
               <li><Link href="/personal-loan">15 Lakh Personal Loan</Link></li>
               <li><Link href="/personal-loan">20 Lakh Personal Loan</Link></li>
               <li><Link href="/personal-loan">25 Lakh Personal Loan</Link></li>
+              <li><Link href="/personal-loan">50 Lakh Personal Loan</Link></li>
             </ul>
           </div>
 
@@ -150,18 +151,7 @@ const Footer = () => {
           <div></div>
         </div>
       </div>
-      <div className="mt-2">
-        <Image
-          alt="india"
-          loading="lazy"
-          width="110"
-          height="70"
-          decoding="async"
-          data-nimg="1"
-          style={{ color: 'transparent' }}
-          src="/madInIndia.svg"
-        />
-      </div>
+
       <div className="mt-5 text-center text-[#6f6969] border-t border-gray-700 pt-2">
         <p>© 2025 - All Rights Reserved - Easy Personal Loan Services</p>
       </div>

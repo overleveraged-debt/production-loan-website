@@ -7,6 +7,8 @@ const images = [
   '/hero1.png',
   '/hero2.png',
   '/hero3.png',
+  '/hero5.svg',
+  '/hero6.svg',
 ];
 
 const HeroSection = () => {

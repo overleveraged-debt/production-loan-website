@@ -23,15 +23,15 @@ const TermsAndConditionsPage = () => {
 
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Definitions</h2>
             <ul className="list-disc pl-6 mb-6">
-                <li><strong>"Service"</strong> refers to Easy Personal Loan Services and its website</li>
-                <li><strong>"User"</strong> refers to individuals accessing our services</li>
-                <li><strong>"Lender"</strong> refers to banks and financial institutions offering loans</li>
-                <li><strong>"Loan"</strong> refers to personal loans facilitated through our platform</li>
+                <li><strong>&quot;Service&quot;</strong> refers to Easy Personal Loan Services and its website</li>
+                <li><strong>&quot;User&quot;</strong> refers to individuals accessing our services</li>
+                <li><strong>&quot;Lender&quot;</strong> refers to banks and financial institutions offering loans</li>
+                <li><strong>&quot;Loan&quot;</strong> refers to personal loans facilitated through our platform</li>
             </ul>
 
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">2. Service Description</h2>
             <p className="mb-4">
-                Easy Personal Loan Services is a loan comparison and facilitation platform. We connect users with lenders but do not provide loans directly. All loan approvals are subject to the lender's discretion and credit policies.
+                Easy Personal Loan Services is a loan comparison and facilitation platform. We connect users with lenders but do not provide loans directly. All loan approvals are subject to the lender&apos;s discretion and credit policies.
             </p>
             <p className="mb-6">
                 We provide information about loan products, facilitate application submission, and may assist with documentation, but we are not responsible for loan approval or disbursement.

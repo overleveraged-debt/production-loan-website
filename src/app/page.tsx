@@ -1,4 +1,5 @@
 import HeroSection from '../components/HeroSection';
+import NoChargesBanner from '../components/NoChargesBanner';
 import Products from '../components/Products';
 import WhyChooseUs from '../components/WhyChooseUs';
 import EasySteps from '../components/EasySteps';
@@ -11,6 +12,7 @@ export default function Home() {
   return (
     <main>
       <HeroSection />
+      <NoChargesBanner />
       <WhyChooseUs />
       <Products />
       <EasySteps />

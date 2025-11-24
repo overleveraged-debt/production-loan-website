@@ -45,7 +45,7 @@ const ContactUsPage = () => {
           Get in Touch with <span className="text-blue-250">Easy Personal Loan Services</span>
         </h2>
         <p className="text-center text-lg max-w-5xl mx-auto mb-8 mt-5 font-inter">
-          We're here to help you find the perfect loan solution. Reach out to our expert team for personalized assistance.
+          We&apos;re here to help you find the perfect loan solution. Reach out to our expert team for personalized assistance.
         </p>
       </div>
       <div className="relative bg-[#EAF1FF] flex flex-col items-center mb-20 ">
@@ -110,7 +110,7 @@ const ContactUsPage = () => {
               <h3 className="font-semibold text-lg mt-3">Visit Us</h3>
               <p className="text-blue-500 font-medium">Address:</p>
               <p className="text-gray-600 text-sm">
-              No 326/3 3rd Floor, Vandana Complex, New Bazar Street, Krishnarajapuram-560036
+                No 326/3 3rd Floor, Vandana Complex, New Bazar Street, Krishnarajapuram-560036
               </p>
             </div>
           </div>
@@ -131,7 +131,7 @@ const ContactUsPage = () => {
         </div>
         <div className="w-full">
           <iframe
-            src="https://maps.google.com/maps?q=Vandana%20Complex,%20New%20Bazar%20Street,%20Krishnarajapuram,%20Bengaluru&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d243.44796!2d77.694413!3d13.008758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTPCsDAwJzMxLjUiTiA3N8KwNDEnMzkuOSJF!5e0!3m2!1sen!2sin!4v1732441899000!5m2!1sen!2sin"
             width="100%"
             height="450"
             style={{ border: 0 }}

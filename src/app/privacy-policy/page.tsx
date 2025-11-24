@@ -18,7 +18,7 @@ const PrivacyPolicyPage = () => {
             <p className="mb-6"><strong>Last Updated:</strong> October 30, 2025</p>
 
             <p className="mb-6">
-                Easy Personal Loan Services ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy describes how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
+                Easy Personal Loan Services (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to protecting your privacy. This Privacy Policy describes how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
             </p>
 
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">Information We Collect</h2>
@@ -89,14 +89,14 @@ const PrivacyPolicyPage = () => {
                 We retain your personal information for as long as necessary to fulfill the purposes outlined in this policy, unless a longer retention period is required by law.
             </p>
 
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Children's Privacy</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Children&apos;s Privacy</h2>
             <p className="mb-6">
                 Our services are not intended for children under 18 years of age. We do not knowingly collect personal information from children under 18.
             </p>
 
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">Changes to This Policy</h2>
             <p className="mb-6">
-                We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the "Last Updated" date.
+                We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the &quot;Last Updated&quot; date.
             </p>
 
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">Contact Us</h2>

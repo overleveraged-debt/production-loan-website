@@ -26,7 +26,7 @@ const AboutUsPage = () => {
                             Easy Personal Loan Services was established in 2004 and specializes exclusively in personal loans, providing exceptional doorstep service. We believe that customer service is at the pinnacle of everything we do, ensuring that every client receives personalized attention and support throughout their loan journey.
                         </p>
                         <p>
-                            Our commitment to excellence and customer satisfaction has made us a trusted name in the financial services industry. We strive to make the loan application process as seamless and convenient as possible, offering tailored solutions that meet our clients' unique financial needs.
+                            Our commitment to excellence and customer satisfaction has made us a trusted name in the financial services industry. We strive to make the loan application process as seamless and convenient as possible, offering tailored solutions that meet our clients&apos; unique financial needs.
                         </p>
                         <p>
                             With years of experience and a dedication to transparency, we continue to serve our community with integrity and professionalism, helping individuals achieve their financial goals through accessible and affordable personal loan options.
@@ -53,7 +53,7 @@ const AboutUsPage = () => {
                                 Mr. H. Raju has been in banking for more than 20 years and has worked in multiple companies before starting his own firm. With extensive experience in the financial sector, he brings deep industry knowledge and a passion for helping individuals achieve their financial goals.
                             </p>
                             <p className="text-gray-700 text-lg leading-relaxed">
-                                Under his leadership, Easy Personal Loan Services has grown to become a trusted name in the personal loan industry, focusing on transparency, customer service excellence, and innovative solutions for our clients' financial needs.
+                                Under his leadership, Easy Personal Loan Services has grown to become a trusted name in the personal loan industry, focusing on transparency, customer service excellence, and innovative solutions for our clients&apos; financial needs.
                             </p>
                         </div>
                     </div>
