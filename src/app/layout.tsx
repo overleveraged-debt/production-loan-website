@@ -13,6 +13,27 @@ import FloatingButtons from "../components/FloatingButtons";
 export const metadata: Metadata = {
   title: "Easy Personal Loan Services",
   description: "Fast and secure personal loans at low interest rates - Making loans simple, transparent, and accessible to everyone.",
+  openGraph: {
+    title: "Easy Personal Loan Services",
+    description: "Fast and secure personal loans at low interest rates.",
+    url: "https://www.easyplblr.com",
+    siteName: "Easy Personal Loan Services",
+    images: [
+      {
+        url: "https://www.easyplblr.com/og-image.jpg", // You should add an og-image.jpg to your public folder
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Easy Personal Loan Services",
+    description: "Fast and secure personal loans at low interest rates.",
+    images: ["https://www.easyplblr.com/og-image.jpg"],
+  },
 };
 
 export default function RootLayout({
