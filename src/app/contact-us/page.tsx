@@ -88,8 +88,8 @@ const ContactUsPage = () => {
                 src="/email.svg"
               />
               <h3 className="font-semibold text-lg mt-3">Email Us</h3>
-              <a href="mailto:support@easypersonalloanservices.com" className="text-blue-500 font-medium">
-                support@easypersonalloanservices.com
+              <a href="mailto:easypl999@gmail.com" className="text-blue-500 font-medium">
+                easypl999@gmail.com
               </a>
               <p className="text-gray-600 text-sm mt-2">
                 We respond within 24 hours
@@ -123,10 +123,10 @@ const ContactUsPage = () => {
             For Queries related to Careers, send your CVs with a cover letter at
           </p>
           <a
-            href="mailto:hr@easypersonalloanservices.com"
+            href="mailto:easypl999@gmail.com"
             className="mt-4 inline-block px-6 py-2 border border-white rounded-lg text-md hover:bg-white hover:text-blue-600 transition"
           >
-            hr@easypersonalloanservices.com
+            easypl999@gmail.com
           </a>
         </div>
         <div className="w-full">

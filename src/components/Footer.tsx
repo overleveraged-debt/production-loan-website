@@ -85,7 +85,7 @@ const Footer = () => {
             </a>
           </div>
           <p className="leading-[2]">Address: No 326/3 3rd Floor, Vandana Complex, New Bazar Street, Krishnarajapuram-560036</p>
-          <a href="mailto:support@easypersonalloanservices.com"><p className="leading-[2]   cursor-pointer">support@easypersonalloanservices.com</p></a>
+          <a href="mailto:easypl999@gmail.com"><p className="leading-[2]   cursor-pointer">easypl999@gmail.com</p></a>
           <a href="tel:+918722545666"><p className="leading-[2] cursor-pointer">+91 8722545666</p></a>
         </div>
         <div className="md:col-span-9 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8">

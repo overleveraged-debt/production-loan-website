@@ -34,6 +34,11 @@ export const metadata: Metadata = {
     description: "Fast and secure personal loans at low interest rates.",
     images: ["https://www.easyplblr.com/og-image.jpg"],
   },
+  icons: {
+    icon: "/fevicon.png",
+    shortcut: "/fevicon.png",
+    apple: "/fevicon.png",
+  },
 };
 
 export default function RootLayout({
