@@ -235,8 +235,8 @@ const LoanApplicationForm = () => {
                             <label htmlFor="cibilScore" className="block text-sm font-medium text-gray-700 mb-2">CIBIL Score</label>
                             <select id="cibilScore" name="cibilScore" required className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" value={formData.cibilScore} onChange={handleChange}>
                               <option value="">Select CIBIL Score</option>
-                              <option value="below-650">Below 650</option>
-                              <option value="above-650">Above 650</option>
+                              <option value="below-700">Below 700</option>
+                              <option value="above-700">Above 700</option>
                               <option value="dont-know">Don't Know</option>
                             </select>
                           </div>

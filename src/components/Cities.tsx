@@ -49,9 +49,9 @@ const Cities = () => {
           height="530"
           decoding="async"
           data-nimg="1"
-          className="w-full max-w-md"
+          className="w-full max-w-sm"
           style={{ color: 'transparent' }}
-          src="/map.svg"
+          src="/map.png"
         />
       </div>
     </div>

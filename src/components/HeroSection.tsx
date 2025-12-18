@@ -2,24 +2,48 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { client, urlFor } from '../lib/sanity';
 
-const images = [
-  '/hero1.png',
-  '/hero2.png',
-  '/hero3.png',
-  '/hero5.svg',
-  '/hero6.svg',
-];
+interface HeroImage {
+  _key: string;
+  _type: 'image';
+  asset: {
+    _ref: string;
+    _type: 'reference';
+  };
+}
 
 const HeroSection = () => {
+  const [images, setImages] = useState<string[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 12000);
-    return () => clearInterval(interval);
+    const fetchImages = async () => {
+      const query = `*[_type == "hero"][0] {
+        heroImages
+      }`;
+      const result = await client.fetch(query);
+      if (result && result.heroImages) {
+        const imageUrls = result.heroImages.map((image: HeroImage) => urlFor(image).url());
+        setImages(imageUrls);
+      }
+    };
+
+    fetchImages();
   }, []);
+
+  useEffect(() => {
+    if (images.length > 0) {
+      const interval = setInterval(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+      }, 12000);
+      return () => clearInterval(interval);
+    }
+  }, [images.length]);
+
+  if (images.length === 0) {
+    return <div>Loading...</div>; // Or a placeholder
+  }
 
   return (
     <div className="relative w-full px-2 sm:px-1 md:px-4 h-[130px] sm:h-[400px] md:h-[461px] max-w-[1320px] mx-auto mt-10">

@@ -10,6 +10,9 @@ const NoChargesBanner = () => {
             <p className="text-base md:text-2xl lg:text-3xl text-blue-600 font-bold">
               We <span className="text-green-600">DO NOT</span> charge our customers any fees
             </p>
+            <p className="text-sm md:text-lg text-gray-700 mt-2 font-bold">
+              ನಮ್ಮ ಗ್ರಾಹಕರಿಂದ ನಾವು ಯಾವುದೇ ಶುಲ್ಕವನ್ನು ವಿಧಿಸುವುದಿಲ್ಲ.
+            </p>
           </div>
         </div>
       </div>
